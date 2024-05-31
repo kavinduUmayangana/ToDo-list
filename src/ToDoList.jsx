@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import './index.css';
 
 function ToDoList() {
     const [tasks,setTasks]=useState(["Eat Breakfast","Take a shower","walk the dog"]);
@@ -50,15 +51,12 @@ function ToDoList() {
     <ol>{tasks.map((task,index)=>
     <li key={index}><span className='text'>{task}</span>
 
-    <button className='delete-butt
-    on' onClick={()=>deleteTask(index)}>Delete</button>
+    <button className='delete-button' onClick={()=>deleteTask(index)}>Delete</button>
     
-    <button className='move-butt
-    on' onClick=
+    <button className='move-button' onClick=
     {()=>moveTaskUp(index)}>👆</button>
 
-    <button className='move-butt
-    on' onClick=
+    <button className='move-button' onClick=
     {()=>moveTaskDown(index)}>👇</button>
     
     
